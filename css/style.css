@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    background: linear-gradient(45deg, rgb(90, 162, 245) 0%, rgba(104,101,240,1) 25%, rgba(56,148,225,1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    row-gap: 4rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    row-gap: 1rem;
+
+    height: 50vh;
+    width: 100%;
+}
+
+.selection-menu {
+    position: relative;
+    width: clamp(30vw, 15rem, 90vw);
+    height: 4vh;
+    padding: 1vh;
+
+    background-color: rgba(104,101,240,0.75);
+    border: 0.3rem solid rgba(94, 92, 238, 0.25);
+    border-radius: 5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+.selection-menu a {
+    position: relative;
+    cursor: pointer;
+    text-decoration-line: none;
+    color: rgb(244,244,244);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.selection-menu .selected {
+    text-decoration-line: underline;
+    /* color: rgb(244,244,244);
+    font-size: 1.5rem;
+    font-weight: 600; */
+}
+.selection-menu .arrow {
+    position: absolute;
+
+    color: white;
+    width: 1.5rem;
+    height: 1.5rem;
+    transform: translateX(-50%);
+
+    pointer-events: none;
+
+    left: 50%;
+    top: -5px;
+    transition: all 0.3 ease 0s;
+}
+
+/* -------------------------------------------- */
+/* The underline when hovering over categories! */
+
+.selection-menu a {
+    transition: all 0.3s ease 0s;
+}
+.selection-menu a:hover {
+    color: rgb(159, 255, 218)
+}
+
+.selection-menu a::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    height: 2px;
+    background: #fff;
+    pointer-events: none;
+
+    width: 0;
+    transform: translate(-50%, 10px);
+    opacity: 0.5;
+
+    transition: 0.3s;
+}
+.selection-menu a:hover::after {
+    width: 100%;
+    opacity: 1;
+    transform: translate(-50%, 2px);
+}
+
+/* ----------- */
+/* Bottom text */
+
+.aboutus {
+    padding: 1.5rem;
+    background: linear-gradient(0deg, rgba(255,255,255, 0.01) 0%, rgba(255,255,255, 0.125) 50%, rgba(255,255,255, 0.01) 100%);
+    border-radius: 5rem;
+}
+
+.aboutus p {
+    width: clamp(15rem, 50rem, calc(100vw - 4rem));
+    font-weight: 500;
+    color: rgb(245,245,245);
+
+    /* -webkit-text-stroke: 1px rgba(230,230,230, 0.1); */
+    overflow: auto;
+}
+
+
+/* ------------------ */
+/* Social media icons */
+
+.socials {
+    position: relative;
+
+    width: 25rem;
+    height: 3.5rem;
+
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.socials > * {
+    height: 2.25rem;
+    width: 2.25rem;
+
+    opacity: 1;
+
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.socials > *:hover {
+    transform: scale(1.25);
+}
+
+.socials > *:hover ~ .social-window {
+    border: 0.4rem solid rgba(255,255,255,1);
+}
+
+
+.socials .arrow {
+    position: absolute;
+    right: 10%;
+}
+
+/* ------------------------------------------------- */
+/* Window that opens up under the social media icons */
+
+.social-window {
+    position: relative;
+
+    background-color: rgba(244,244,244,0.1);
+    border: 0.35rem solid rgba(255,255,255,0.1);
+    border-radius: 3rem;
+
+    width: clamp(10rem, 25rem, 100vw);
+    height: 15rem;
+
+    transition: 0.3s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social-window .title {
+    font-size: 1.5rem;
+}
+.social-window .description {
+
+}
+
+.social-icon {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: -0.2rem; /* half the border */
+
+    height: 3rem;
+    width: 3rem;
+
+    transition: opacity 0.3s;
+}
+
+
+/* ///////////////////////// */
+/* Logo spinning / container */
+
+.logo-container {
+    position: relative;
+
+    width: 15rem;
+    height: 15rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.logo, .logo-spinner {
+    position: relative;
+
+    border-radius: 100%;
+    width: 15rem;
+    height: 15rem;
+
+    z-index: 1;
+}
+
+.logo-spinner {
+    position: absolute;
+    border: 0.4rem dashed ghostwhite;
+
+    z-index: -1;
+    pointer-events: none;
+
+
+    animation: spin 60s linear infinite;
+    transition: 0.1s ease;
+}
+
+.logo:hover ~ .logo-spinner{
+    border: 0.6rem dashed ghostwhite;
+    /* animation-duration: 30s; */
+    animation: spin 30s linear infinite;
+}
+
+
+h1 {
+    color: rgb(234,234,234);
+}
+
+
+/* --------- */
+/* Scrollbar */
+/* --------- */
+
+::-webkit-scrollbar{
+    width: 0.6rem;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgb(128, 186, 236);
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb{
+    border: 0.4rem solid rgb(22, 86, 146);
+    background-color: var(--scrollbar-color);
+    border-radius: 10px;
+}
