@@ -14,6 +14,20 @@
     display: none;
 }
 
+
+
+html {
+    font-size: 16px;
+}
+
+/* A media query for devices smaller than 1600px to scale down "rem" */
+@media (max-width: 1660px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+
 body {
     background: linear-gradient(45deg, rgb(90, 162, 245) 0%, rgba(104,101,240,1) 25%, rgba(56,148,225,1) 100%);
     background-repeat: no-repeat;
@@ -36,15 +50,20 @@ main {
 
     row-gap: 1rem;
 
-    height: 50vh;
+    min-height: 50vh;
+    max-height: 50vh;
     width: 100%;
+
+    /* overflow-y: auto; */
 }
 
 .selection-menu {
     position: relative;
-    width: clamp(30vw, 15rem, 90vw);
+    /* width: clamp(30vw, 15rem, 90vw); */
     height: 4vh;
     padding: 1vh;
+    padding-left: 4em;
+    padding-right: 4em;
 
     background-color: rgba(104,101,240,0.75);
     border: 0.3rem solid rgba(94, 92, 238, 0.25);
@@ -53,6 +72,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
+
     gap: 10%;
 }
 
@@ -62,13 +83,60 @@ main {
     text-decoration-line: none;
     color: rgb(244,244,244);
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.5em;
+
+    background-color: rgba(94, 92, 238, 0.5);
+    /* border: 0.2rem solid rgba(94, 92, 238, 0.25); */
+    border-radius: 1em;
+    padding: 0.25rem 0.5rem;
+
+    flex-shrink: 0;
 }
+
+.selection-menu a img {
+    position: absolute;
+
+    transform: translate(-50%, -60%);
+    left: 50%;
+    top: 0;
+
+    width: 1.25em;
+    height: 1.25em;
+    padding: 0.25em;
+
+    background-color: rgba(94,92,238,0.5);
+    border-radius: 1em;
+}
+
+.selection-menu a:has(img) {
+    top: 0.5em;
+}
+
+
+@media (max-width: 1440px) {
+    .selection-menu {
+        font-size: 10px;
+    }
+}
+
+
+
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.6);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 .selection-menu .selected {
     text-decoration-line: underline;
     /* color: rgb(244,244,244);
     font-size: 1.5rem;
     font-weight: 600; */
+    animation: popIn 0.3s ease 0s;
 }
 .selection-menu .arrow {
     position: absolute;
@@ -123,6 +191,7 @@ main {
     padding: 1.5rem;
     background: linear-gradient(0deg, rgba(255,255,255, 0.01) 0%, rgba(255,255,255, 0.125) 50%, rgba(255,255,255, 0.01) 100%);
     border-radius: 5rem;
+    max-height: 10vh;
 }
 
 .aboutus p {
@@ -132,7 +201,14 @@ main {
 
     /* -webkit-text-stroke: 1px rgba(230,230,230, 0.1); */
     overflow: auto;
+    max-height: 100%;
+    padding: 0;
+    margin: 0;
 }
+
+/* .spacer {
+    flex-grow: 0.5;
+} */
 
 
 /* ------------------ */
@@ -187,7 +263,7 @@ main {
     border: 0.35rem solid rgba(255,255,255,0.1);
     border-radius: 3rem;
 
-    width: clamp(10rem, 25rem, 100vw);
+    width: clamp(10rem, 25rem, calc(100vw - 0.2rem));
     height: 15rem;
 
     transition: 0.3s;
@@ -203,6 +279,22 @@ main {
 }
 .social-window .description {
 
+}
+
+.social-window .visit {
+    position: absolute;
+    bottom: -0.175rem;
+
+    transform: translateY(50%);
+
+    font-weight: 600;
+
+    background-color: rgb(168, 175, 245);
+    color: rgb(22,22,22);
+    border: 0.35rem solid rgba(255,255,255,0.9);
+
+    border-radius: 1em;
+    padding: 0.5em 1em;
 }
 
 .social-icon {
