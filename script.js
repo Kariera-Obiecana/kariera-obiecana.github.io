@@ -53,7 +53,6 @@ socials.forEach(social => {
     if (social.classList.contains("arrow")) return;
 
     let link = social.dataset.link;
-    currentLink = link;
 
     social.addEventListener("dblclick", e => {
         window.open(link, '_blank');
@@ -70,6 +69,7 @@ socials.forEach(social => {
 
     function setSocial() {
         visit.classList.remove("hidden");
+        currentLink = link;
 
         // Set icon and text
         socialIcon.src = image;

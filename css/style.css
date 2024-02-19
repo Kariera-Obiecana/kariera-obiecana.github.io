@@ -50,8 +50,7 @@ main {
 
     row-gap: 1rem;
 
-    min-height: 50vh;
-    max-height: 50vh;
+    min-height: 60vh;
     width: 100%;
 
     /* overflow-y: auto; */
@@ -64,6 +63,7 @@ main {
     padding: 1vh;
     padding-left: 4em;
     padding-right: 4em;
+    margin-top: 2rem;
 
     background-color: rgba(104,101,240,0.75);
     border: 0.3rem solid rgba(94, 92, 238, 0.25);
@@ -277,9 +277,9 @@ main {
 .social-window .title {
     font-size: 1.5rem;
 }
-.social-window .description {
+/* .social-window .description {
 
-}
+} */
 
 .social-window .visit {
     position: absolute;
@@ -287,7 +287,8 @@ main {
 
     transform: translateY(50%);
 
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 1rem;
 
     background-color: rgb(168, 175, 245);
     color: rgb(22,22,22);
@@ -295,6 +296,13 @@ main {
 
     border-radius: 1em;
     padding: 0.5em 1em;
+
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.social-window .visit:hover {
+    transform: translateY(50%) scale(1.1);
 }
 
 .social-icon {
