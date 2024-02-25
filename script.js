@@ -26,7 +26,7 @@ let descriptions = {
     "Facebook": "Najnowsze info i materiały - najlepsze miejsce do kontaktu z nami!",
     "Instagram": "Najnowsze info, materiały i zdjęcia!",
     "Tiktok": "Filmiki zawierające najnowsze info, materiały i wkrótce klipy!",
-    "Pinterest": "Materiały i informacje!"
+    "Pinterest": "Wszelkie materiały i informacje!"
 }
 
 let clicked = false;
