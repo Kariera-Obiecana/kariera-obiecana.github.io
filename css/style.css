@@ -422,8 +422,8 @@ footer {
 }
 
 .partner-icon {
-    height: 2.5rem;
-    margin: 0.5rem 0.8rem;
+    height: 3rem;
+    margin: 0.8rem 25px;
 
     transition: 0.2s ease 0s;
 }
