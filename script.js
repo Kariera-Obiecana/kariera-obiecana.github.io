@@ -24,8 +24,8 @@ const pages = document.querySelector(".selection-menu > a");
 
 let descriptions = {
     "Facebook": "Najnowsze info i materiały - najlepsze miejsce do kontaktu z nami!",
-    "Instagram": "Info, materiały, zdjęcia i nowości!",
-    "Tiktok": "Filmiki zawierające najnowsze info, materiały, i wkrótce klipy!",
+    "Instagram": "Najnowsze info, materiały i zdjęcia!",
+    "Tiktok": "Filmiki zawierające najnowsze info, materiały i wkrótce klipy!",
     "Pinterest": "Materiały i informacje!"
 }
 
