@@ -390,3 +390,31 @@ h1 {
     background-color: var(--scrollbar-color);
     border-radius: 10px;
 }
+
+.prelegent img {
+    border-radius: 5%;
+    width: 20rem;
+    height: 20rem;
+}
+
+.prelegent {
+    color: #ffff;
+    border-radius: 5%;
+    height: 25rem;
+    width: 20rem;
+    padding: 1%;
+    text-align: center;
+    background-color: rgba(104,101,240,0.75);
+}
+
+footer {
+    background: linear-gradient(0deg, rgba(255,255,255, 0.01) 0%, rgba(255,255,255, 0.125) 50%, rgba(255,255,255, 0.01) 100%);
+    width: 100%;
+    
+}
+
+.test-img {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 20px 20px;
+}
