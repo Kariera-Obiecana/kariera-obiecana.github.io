@@ -279,9 +279,9 @@ main {
 .social-window .title {
     font-size: 1.5rem;
 }
-/* .social-window .description {
-
-} */
+.social-window .description {
+    width: 80%;
+}
 
 .social-window .visit {
     position: absolute;

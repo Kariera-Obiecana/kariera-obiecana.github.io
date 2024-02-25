@@ -23,10 +23,10 @@ const pages = document.querySelector(".selection-menu > a");
 // let currentSocial = "Facebook"
 
 let descriptions = {
-    "Facebook": "opis co na Facebooku",
-    "Instagram": "opis co na Instagramie",
-    "Tiktok": "opis co na Tiktoku",
-    "Pinterest": "opis co na Pintereście"
+    "Facebook": "Najnowsze info i materiały - najlepsze miejsce do kontaktu z nami!",
+    "Instagram": "Info, materiały, zdjęcia i nowości!",
+    "Tiktok": "Filmiki zawierające najnowsze info, materiały, i wkrótce klipy!",
+    "Pinterest": "Materiały i informacje!"
 }
 
 let clicked = false;
