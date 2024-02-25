@@ -98,6 +98,3 @@ document.addEventListener("click", e => {
         disableSocial();
     }
 });
-
-
-// Switch 
