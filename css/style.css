@@ -192,6 +192,8 @@ main {
     background: linear-gradient(0deg, rgba(255,255,255, 0.01) 0%, rgba(255,255,255, 0.125) 50%, rgba(255,255,255, 0.01) 100%);
     border-radius: 5rem;
     max-height: 10vh;
+
+    overflow-y: auto;
 }
 
 .aboutus p {
@@ -367,33 +369,6 @@ main {
 }
 
 
-h1 {
-    color: rgb(234,234,234);
-}
-
-
-/* --------- */
-/* Scrollbar */
-/* --------- */
-
-::-webkit-scrollbar{
-    width: 0.6rem;
-}
-
-::-webkit-scrollbar-track{
-    background-color: rgb(128, 186, 236);
-    border-radius: 2px;
-}
-
-::-webkit-scrollbar-thumb{
-    border: 0.4rem solid rgb(22, 86, 146);
-    background-color: var(--scrollbar-color);
-    border-radius: 10px;
-}
-
-
-
-
 /* ------------ */
 /* Konferencja! */
 
@@ -459,3 +434,32 @@ footer {
     cursor: pointer;
 }
 
+
+/* --------- */
+/* Scrollbar */
+/* --------- */
+:root {
+    --scrollbar-color: rgb(128,186,236);
+    --scrollbar-thumb: rgb(22, 86, 146);
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-color, rgb(22, 86, 146));
+}
+
+/* ::-webkit-scrollbar{
+    width: 0.6rem;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--scrollbar-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 0.4rem solid var(--scrollbar-thumb);
+    background-color: var(--scrollbar-thumb);
+    border-radius: 10px;
+}  */
