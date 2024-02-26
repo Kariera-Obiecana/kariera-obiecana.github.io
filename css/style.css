@@ -412,7 +412,10 @@ h1, h3 {
 }
 
 .prelegenci {
-    font-size: clamp(0.45em, 1vw, 1em);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1500px;
 }
 
 
