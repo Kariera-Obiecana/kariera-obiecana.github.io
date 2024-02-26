@@ -112,9 +112,9 @@ main {
     top: 0.5em;
 }
 
-.blue-filter {
-    filter: brightness(1.2) invert(1) sepia(1) hue-rotate(180deg);
-}
+
+
+
 
 @media (max-width: 1440px) {
     .selection-menu {
@@ -378,6 +378,9 @@ h1, h3 {
     color: rgb(244,244,244);
 }
 
+.blue-filter {
+    filter: brightness(1.2) invert(1) sepia(1) hue-rotate(180deg);
+}
 
 .prelegent img {
     border-radius: 5em;
@@ -389,24 +392,30 @@ h1, h3 {
 .prelegent {
     color: #ffff;
     border-radius: 5em;
-    height: 25em;
     width: 20em;
     padding: 1%;
     text-align: center;
     background-color: rgba(71, 69, 202, 0.4);
 
-    margin: 0.1em;
-    transition: border 0.1s;
+    margin: 0.6em;
+    transition: all 0.1s;
     border: 0.5em solid rgba(244,244,244,0.1);
 }
 
 .prelegent:hover {
     border: 0.5em solid rgba(244,244,244, 0.5);
+    transform: scale(1.07);
+}
+
+.prelegent p {
+    margin: 1em;
 }
 
 .prelegenci {
     font-size: clamp(0.45em, 1vw, 1em);
 }
+
+
 
 /* @media (max-width: 890px) {
     .prelegenci {
