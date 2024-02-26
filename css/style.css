@@ -437,7 +437,7 @@ footer {
 }
 
 .partner-icon {
-    height: 3rem;
+    height: 4rem;
     margin: 0.8rem 25px;
 
     transition: 0.2s ease 0s;
@@ -453,27 +453,27 @@ footer {
 /* Scrollbar */
 /* --------- */
 :root {
-    --scrollbar-color: rgb(128,186,236);
+    --scrollbar-color: rgb(89, 163, 227);
     --scrollbar-thumb: rgb(22, 86, 146);
+    --scrollbar-hover: rgb(27, 104, 176);
 }
 
-* {
-    scrollbar-width: thin;
-    scrollbar-color: var(--scrollbar-color, rgb(22, 86, 146));
+::-webkit-scrollbar{
+	width: 12px;
 }
-
-/* ::-webkit-scrollbar{
-    width: 0.6rem;
-    border-radius: 2px;
-}
-
 ::-webkit-scrollbar-track{
-    background-color: var(--scrollbar-color);
-    border-radius: 5px;
+	background: var(--scrollbar-color);
 }
-
-::-webkit-scrollbar-thumb {
-    border: 0.4rem solid var(--scrollbar-thumb);
-    background-color: var(--scrollbar-thumb);
-    border-radius: 10px;
-}  */
+::-webkit-scrollbar-thumb{
+	background: var(--scrollbar-thumb);
+	border-radius: 100vw;
+}
+::-webkit-scrollbar-thumb:hover{
+	background: var(--scrollbar-hover);
+}
+@supports (scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-color)){
+	*{
+		scrollbar-color: var(--scrollbar-thumb);
+		scrollbar-width: 12px;
+	}
+}
