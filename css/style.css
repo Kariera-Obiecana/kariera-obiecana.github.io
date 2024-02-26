@@ -112,6 +112,9 @@ main {
     top: 0.5em;
 }
 
+.blue-filter {
+    filter: brightness(1.2) invert(1) sepia(1) hue-rotate(180deg);
+}
 
 @media (max-width: 1440px) {
     .selection-menu {
