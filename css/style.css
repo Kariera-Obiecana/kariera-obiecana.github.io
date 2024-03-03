@@ -65,8 +65,8 @@ main {
     padding-right: 4em;
     margin-top: 2rem;
 
-    background-color: rgba(104,101,240,0.75);
-    border: 0.3rem solid rgba(94, 92, 238, 0.25);
+    background-color: rgba(109, 106, 255, 0.75);
+    border: 0.3rem solid rgba(94, 92, 238, 0.5);
     border-radius: 5rem;
 
     display: flex;
