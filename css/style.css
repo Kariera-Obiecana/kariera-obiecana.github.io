@@ -55,11 +55,29 @@ main {
 
 table {
     color: white;  
-    text-align: center;
+    text-align: left;
+    border-radius: 50px;
 }
 
 td, th {
+    width: 24em;
+    padding: 0.2em;
+    background: linear-gradient(90deg, rgba(255,255,255, 0.00) 0%, rgba(255,255,255, 0.125) 50%, rgba(255,255,255, 0.00) 100%);
+}
+
+th {
+    text-align: center;
+}
+
+tr :first-child {
+    width: 8em;
+}
+tr :last-child {
     width: 16em;
+}
+
+.tab-left{
+    text-align: left;
 }
 
 .selection-menu {
