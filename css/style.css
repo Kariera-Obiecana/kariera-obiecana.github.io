@@ -66,7 +66,9 @@ td, th {
     position: relative;
     /* width: clamp(30vw, 15rem, 90vw); */
     height: 4vh;
-    padding: 2.8em 3em 2.5em 3em;
+    padding: 1.7em;
+    padding-left: 4em;
+    padding-right: 4em;
     margin-top: 1.8rem;
 
     background-color: rgba(110, 107, 255, 0.75);
@@ -102,22 +104,22 @@ td, th {
 
     color: #36383b;
     font-weight: 800;
-    font-size: 30px;
+    font-size: 1.5em;
 
-    transform: translate(-50%, -60%);
-    left: 49.5%;
-    top: -10px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: -0.4em;
 
     width: 1.1em;
     height: 1.1em;
-    padding: 0.3em 0.2em 0.1em 0.2em;
+    padding: 0.2em;
 
     background-color: rgba(94,92,238,0.5);
     border-radius: 1em;
 }
 
 .selection-menu a:has(span) {
-    top: 0.5em;
+    top: 0.8em;
 }
 
 @media (max-width: 1440px) {
