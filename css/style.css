@@ -534,3 +534,8 @@ footer {
 .prelegent ::-webkit-scrollbar{
     width: 8px;
 }
+
+a {
+    color: white;
+    text-decoration: none;
+}
