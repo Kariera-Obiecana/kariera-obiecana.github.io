@@ -53,6 +53,15 @@ main {
     /* overflow-y: auto; */
 }
 
+table {
+    color: white;  
+    text-align: center;
+}
+
+td, th {
+    width: 16em;
+}
+
 .selection-menu {
     position: relative;
     /* width: clamp(30vw, 15rem, 90vw); */
@@ -201,6 +210,10 @@ main {
     padding: 0;
     margin: 0;
     overflow: hidden;
+}
+
+.aboutus h3 {
+    font-size: 1.5em;
 }
 
 /* .spacer {
@@ -384,7 +397,7 @@ h1, h3 {
 }
 
 .prelegent img {
-    border-radius: 5em;
+    border-radius: 4em;
     width: 20em;
     height: 20em;
     
