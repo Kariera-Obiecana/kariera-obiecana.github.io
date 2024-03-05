@@ -63,12 +63,12 @@ table {
 td, th {
     width: 24em;
     padding: 0.2em;
-    background: rgba(110, 107, 255, 0.75);
-
+    background: rgba(255, 255, 255, 0.1) 50%;
 }
 
 th {
     text-align: center;
+    background: rgba(255,255,255, 0.23) 0%;
 }
 
 tr :first-child {
@@ -76,6 +76,13 @@ tr :first-child {
 }
 tr :last-child {
     width: 16em;
+}
+
+tr:hover {
+    background-color: rgba(255,255,255, 0.05);
+}
+tr:first-child:hover{
+    background: rgba(255,255,255, 0.0) 0%;
 }
 
 .tab-left{
@@ -216,8 +223,9 @@ tr :last-child {
 
 .aboutus {
     padding: 1.5rem;
-    background-color: rgba(71, 69, 202, 0.4);
     border-radius: 5rem;
+    background-color: rgba(71, 69, 202, 0.4);
+    border: 0.3rem solid rgba(94, 92, 238, 0.5);
     overflow-y: auto;
 }
 
@@ -419,7 +427,7 @@ h1, h3 {
 }
 
 .prelegent img {
-    border-radius: 4em;
+    border-radius: 3.85em;
     width: 20em;
     height: 20em;
     
@@ -537,4 +545,3 @@ a {
 .target {
     background: #919de3;
 }
-
