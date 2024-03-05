@@ -54,9 +54,10 @@ main {
 }
 
 table {
-    color: white;  
+    color: #ffffff;
     text-align: left;
-    border-radius: 50px;
+    border: 3px solid rgba(110, 107, 255, 0.75);
+    overflow: hidden;
 }
 
 td, th {
@@ -91,7 +92,7 @@ tr:first-child:hover{
 .selection-menu {
     position: relative;
     /* width: clamp(30vw, 15rem, 90vw); */
-    height: 4vh;
+    height: 5vh;
     padding: 1.7em;
     padding-left: 4em;
     padding-right: 4em;
@@ -117,7 +118,7 @@ tr:first-child:hover{
     font-weight: 600;
     font-size: 1.5em;
 
-    background-color: rgba(94, 92, 238, 0.5);
+    background-color: rgba(100, 98, 232, 1);
     /* border: 0.2rem solid rgba(94, 92, 238, 0.25); */
     border-radius: 1em;
     padding: 0.25rem 0.5rem;
@@ -140,7 +141,7 @@ tr:first-child:hover{
     height: 1.1em;
     padding: 0.2em;
 
-    background-color: rgba(94,92,238,0.5);
+    background-color: rgba(100, 98, 232, 1);
     border-radius: 1em;
 }
 
@@ -165,9 +166,9 @@ tr:first-child:hover{
 
 .selection-menu .selected {
     text-decoration-line: underline;
-    /* color: rgb(244,244,244);
-    font-size: 1.5rem;
-    font-weight: 600; */
+    /* color: rgb(244,244,244);*/
+    /*font-size: 1.5rem;*/
+    /*font-weight: 600;*/
     animation: popIn 0.3s ease 0s;
 }
 .selection-menu .arrow {
@@ -182,7 +183,7 @@ tr:first-child:hover{
 
     left: 50%;
     top: -5px;
-    transition: all 0.3 ease 0s;
+    transition: 0.3s ease;
 }
 
 /* -------------------------------------------- */
@@ -208,7 +209,8 @@ tr:first-child:hover{
     transform: translate(-50%, 10px);
     opacity: 0.5;
 
-    transition: 0.3s;
+    transition: transform 0.3s, width 0.3s 0.2s ease-in-out, opacity 0.3s 0.5s;
+
 }
 .selection-menu a:hover::after {
     width: 100%;
@@ -222,7 +224,7 @@ tr:first-child:hover{
 .aboutus {
     padding: 1.5rem;
     border-radius: 5rem;
-    background-color: rgba(110, 107, 255, 0.75);
+    background-color: rgba(71, 69, 202, 0.4);
     border: 0.3rem solid rgba(94, 92, 238, 0.5);
     overflow-y: auto;
 }
@@ -407,9 +409,9 @@ tr:first-child:hover{
 }
 
 .logo:hover ~ .logo-spinner{
-    border: 0.6rem dashed ghostwhite;
+    border: 0.2rem dashed ghostwhite;
     /* animation-duration: 30s; */
-    animation: spin 30s linear infinite;
+    animation: spin 20s linear infinite;
 }
 
 
@@ -477,7 +479,8 @@ h1, h3 {
 } */
 
 footer {
-    background: linear-gradient(0deg, rgba(255,255,255, 0.01) 0%, rgba(255,255,255, 0.125) 50%, rgba(255,255,255, 0.01) 100%);
+    background-color: rgba(244,244,244,0.1);
+    border-top: 0.35rem solid rgba(255,255,255,0.1);
     width: 100%;
 }
 
@@ -485,11 +488,11 @@ footer {
     height: 4rem;
     margin: 0.8rem 25px;
 
-    transition: 0.2s ease 0s;
+    transition: 0.5s ease 0s;
 }
 
 .partner-icon:hover {
-    transform: scale(1.25);
+    transform: scale(1.1);
     cursor: pointer;
 }
 
@@ -536,6 +539,9 @@ footer {
 }
 
 a {
-    color: white;
-    text-decoration: none;
+    color: #d7cdc1;
+}
+
+.target {
+    background: #919de3;
 }
