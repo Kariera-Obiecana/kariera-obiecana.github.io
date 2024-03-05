@@ -208,7 +208,7 @@ tr:first-child:hover{
     transform: translate(-50%, 10px);
     opacity: 0.5;
 
-    transition: transform 0.3s, width 0.3s 0.2s ease-in-out, opacity 0.3s 0.5s;
+    transition: transform 0.3s, width 0.3s 0.12s ease-in-out, opacity 0.3s 0.5s;
 
 }
 .selection-menu a:hover::after {
