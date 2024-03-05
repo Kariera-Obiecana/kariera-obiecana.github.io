@@ -487,11 +487,11 @@ footer {
 .partner-icon {
     height: 4rem;
     margin: 0.8rem 25px;
-    transition: 0.5s ease 0s;
+    transition: 0.35s ease 0s;
 }
 
 .partner-icon:hover {
-    transform: scale(1.1);
+    transform: scale(1.25);
     cursor: pointer;
 }
 
