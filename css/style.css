@@ -422,7 +422,7 @@ h1, h3 {
 }
 
 .blue-filter {
-    filter: brightness(1.2) invert(1) sepia(1) hue-rotate(180deg);
+    filter: brightness(1.2) invert(0) sepia(1) hue-rotate(180deg);
 }
 
 .prelegent img {
