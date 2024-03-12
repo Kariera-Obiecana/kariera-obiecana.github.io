@@ -94,7 +94,7 @@ tr:first-child:hover{
 .selection-menu {
     position: relative;
     /* width: clamp(30vw, 15rem, 90vw); */
-    height: 5vh;
+    min-height: 5vh;
     padding: 1.7em;
     padding-left: 4em;
     padding-right: 4em;
@@ -126,6 +126,7 @@ tr:first-child:hover{
     padding: 0.25rem 0.5rem;
 
     flex-shrink: 0;
+    top: 0.8em; /*  Każda opcja menu powinna mieć element span, aby był dobry alignment  */
 }
 
 .selection-menu a span {
@@ -147,9 +148,9 @@ tr:first-child:hover{
     border-radius: 1em;
 }
 
-.selection-menu a:has(span) {
+/* .selection-menu a:has(span) {
     top: 0.8em;
-}
+} */
 
 @media (max-width: 1440px) {
     .selection-menu {
@@ -208,7 +209,8 @@ tr:first-child:hover{
     transform: translate(-50%, 10px);
     opacity: 0.5;
 
-    transition: transform 0.3s, width 0.3s 0.12s ease-in-out, opacity 0.3s 0.5s;
+    transition: 0.35s;
+    /* transition: transform 0.3s, width 0.3s 0.12s ease-in-out, opacity 0.3s 0.5s; */
 
 }
 .selection-menu a:hover::after {
@@ -302,7 +304,7 @@ tr:first-child:hover{
     border: 0.35rem solid rgba(255,255,255,0.1);
     border-radius: 3rem;
 
-    width: clamp(10rem, 25rem, calc(100vw - 0.2rem));
+    width: clamp(10rem, 25rem, calc(100% - 0.2rem));
     height: 15rem;
 
     transition: 0.3s;
