@@ -43,6 +43,7 @@ document.addEventListener('mousemove', (event) => {
         // timerContainer.fontSize = `${height / 1.5}px`;
         timerText.style.height = `${height}px`;
         timerText.style.fontSize = `${height / 1.5}px`;
+        timerContainer.style.borderRadius = `${height / 1.5}px`;
     } else if (isDragging) {
         const left = event.clientX - initialX;
         const top = event.clientY - initialY;
@@ -71,6 +72,10 @@ const settings = document.querySelector("#settings");
 const settingsContainer = document.querySelector(".timer-settings");
 
 const centerButton = document.querySelector('.wycentruj');
+const hideButton = document.querySelector('.ukryj');
+
+const stopbutton = document.querySelector('button.stop');
+const startbutton = document.querySelector('button.start');
 
 settings.addEventListener('click', () => {
     settingsContainer.classList.toggle('hidden');
@@ -81,6 +86,22 @@ centerButton.addEventListener('click', () => {
     timerContainer.style.top = '';
 });
 
+hideButton.addEventListener('click', () => {
+    startbutton.classList.toggle('hidden');
+    stopbutton.classList.toggle('hidden');
+})
+
+
+
+
+stopbutton.addEventListener('click', () => {
+    started = false;
+    timerText.style.color = 'rgba(255,255,255,0.5)';
+});
+startbutton.addEventListener('click', () => {
+    started = true;
+    timerText.style.color = ''; 
+});
 
 
 // ------------------- //
@@ -131,6 +152,8 @@ function getTime() {
         timeDifference += 24 * 60; // Add 24 hours if the target time is in the past
     }
 
+    if (isNaN(timeDifference)) return false;
+
     return timeDifference * 60 - seconds;
 }
 
@@ -141,19 +164,30 @@ timerInput.addEventListener('input', () => {
     let hour = date.getHours();
     let minute = date.getMinutes();
 
-    czasResult.innerHTML = `Bieżący czas: ${hour}:${minute}<br> Celowy czas: ${timerInput.value} (czas: ${formatTime(getTime())})`;
+    let timeRemaining = getTime();
+    czasResult.innerHTML = `Bieżący czas: ${hour}:${minute}<br> Celowy czas: ${timerInput.value} (czas: ${formatTime(timeRemaining)})`;
+
+    timerText.innerHTML = `${formatTime(timeRemaining)}`;
+    timerText.style.color = `rgba(255,255,255,0.5)`;
 });
 
 ustaw.addEventListener('click', () => {
     time = getTime()
     started = true;
+    timerText.style.color = '';
+
+    updateTime();
 });
+
+function updateTime() {
+    timerText.innerText = formatTime(time);
+}
 
 // Start the timer!
 setInterval(() => {
     if (!started) return;
 
-    timerText.innerText = formatTime(time);
+    updateTime();
     time--;
 }, 1000)
 

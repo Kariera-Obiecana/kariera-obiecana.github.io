@@ -81,3 +81,31 @@
     flex-direction: column;
     gap: 0.5rem;
 }
+
+
+.timer-container button {
+    position: absolute;
+    top: calc(100% + 1.5rem);
+
+    padding: 0.5rem;
+    border-radius: 5rem;
+    width: 5rem;
+
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.timer-container button:hover {
+    transform: scale(1.1);
+}
+
+button.start {
+    right: calc(50% - 5.25rem);
+    background-color: lightgreen;
+    border: 0.3rem solid rgb(84, 196, 84);
+}
+button.stop {
+    left: calc(50% - 5.25rem);
+    background-color: lightcoral;
+    border: 0.3rem solid rgb(189, 91, 91);
+}
