@@ -26,7 +26,13 @@ let descriptions = {
     "Facebook": "Najnowsze info i materiały - najlepsze miejsce do kontaktu z nami!",
     "Instagram": "Najnowsze info, materiały i zdjęcia!",
     "Tiktok": "Filmiki zawierające najnowsze info, materiały i wkrótce klipy!",
-    "Pinterest": "Wszelkie materiały i informacje!"
+    "Pinterest": "Wszelkie materiały i informacje!",
+    "Youtube": "Filmiki, klipy i transmisje na żywo z naszych działalności!",
+    "Spotify": "Podcasty, informacje!",
+    "RSS": "Podcasty!",
+    "LinkedIn": "",
+
+
 }
 
 let clicked = false;
@@ -57,7 +63,7 @@ socials.forEach(social => {
     social.addEventListener("dblclick", e => {
         window.open(link, '_blank');
     })
-    
+
 
     // social.addEventListener("click", e => {
     //     window.open(link, '_blank');
